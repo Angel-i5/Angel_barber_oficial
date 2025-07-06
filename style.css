@@ -1,0 +1,375 @@
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    background-color: #121212;
+    color: #f0f0f0;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 20px;
+    overflow: hidden;
+}
+
+header {
+    background: #292929;
+    padding: 10px 0;
+    border-bottom: 2px solid #c4a35a;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: background-color 0.3s;
+}
+
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 155px;
+    height: 100px;
+    margin-bottom: 0;
+    transition: width 0.3s, height 0.3s;
+}
+
+.main-nav {
+    display: block;
+}
+
+.main-nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+}
+
+.main-nav li {
+    margin-left: 2rem;
+}
+
+.main-nav a {
+    color: #f0f0f0;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+.main-nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #c4a35a;
+    transition: width 0.3s;
+}
+
+.main-nav a:hover::after {
+    width: 100%;
+}
+
+.nav-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    display: block;
+}
+
+.hamburger-menu {
+    display: none;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    padding: 0;
+    z-index: 1001;
+}
+
+.hamburger-menu span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #f0f0f0;
+    margin: 5px 0;
+    transition: all 0.3s;
+}
+
+.hamburger-menu.active span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+.hamburger-menu.active span:nth-child(2) {
+    opacity: 0;
+}
+.hamburger-menu.active span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+.hero {
+    background: url('imagenes/hero-background.png') no-repeat center center/cover;
+    height: calc(100vh - 102px);
+    min-height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    color: white;
+    margin-top: 102px;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.hero-content {
+    z-index: 1;
+    max-width: 600px;
+    padding: 20px;
+}
+
+.hero h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.cta-button {
+    font-family: 'Roboto', sans-serif;
+    background-color: #c4a35a;
+    color: #121212;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    transition: background-color 0.3s, transform 0.3s;
+    display: inline-block;
+    border-radius: 20px;
+}
+
+.cta-button:hover {
+    background-color: #dfbf7f;
+    color: #292929;
+    transform: translateY(-3px);
+   
+}
+
+.services {
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.services h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: #c4a35a;
+    margin-bottom: 3rem;
+}
+
+.service-cards {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: #1e1e1e;
+    padding: 2rem;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+
+
+
+div .card {
+    display: block;
+    align-items: center;
+    text-align: center;
+    border: #c4a35a;
+    width: 300px;
+    height: 300px;
+    
+    transition: width 0.3s, height 0.3s;
+}
+
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card h4 {
+    font-family: 'Playfair Display', serif;
+    color: #c4a35a;
+    font-size: 1.5rem;
+    margin-top: 0;
+}
+
+.social {
+    padding: 4rem 0;
+    text-align: center;
+    background-color: #1a1a1a;
+}
+
+.social h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: #c4a35a;
+    margin-bottom: 2rem;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.social-icons a {
+    
+    display: inline-block;
+    transition: transform 0.3s;
+    color: azure;
+}
+
+
+.social-icons a:hover {
+    transform: translateY(-5px);
+}
+
+footer {
+    background: #121212;
+    color: #888;
+    text-align: center;
+    padding: 1.5rem 0;
+    margin-top: 0; 
+    border-top: 1px solid #403c0f;
+}
+
+/* Responsive */
+@media(max-width: 992px) {
+    html {
+        scroll-padding-top: 80px;
+    }
+
+    .logo {
+        width: 120px;
+        height: 80px;
+    }
+
+    body.nav-open {
+        overflow: hidden;
+    }
+
+    .main-nav {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: #292929;
+        backdrop-filter: blur(10px);
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in-out;
+        z-index: 1000;
+        padding-top: 80px; /* Space for fixed header */
+        padding-bottom: 20px;
+    }
+
+    .main-nav.active {
+        transform: translateX(0);
+    }
+    
+    .hamburger-menu {
+        display: block;
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    .main-nav li {
+        margin: 1.5rem 0;
+    }
+
+    .main-nav .nav-button {
+        display: block;
+        margin-top: 2rem;
+        width: fit-content;
+    }
+
+    .nav-button:not(.active) {
+       display: none;
+    }
+}
+
+@media(max-width: 768px) {
+    .logo {
+        width: 120px;
+        height: 80px;
+    }
+    
+    .hero {
+        height: calc(100vh - 80px);
+        margin-top: 80px;
+    }
+
+    .hero h2 {
+        font-size: 2.2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .service-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+        max-width: 350px;
+    }
+    .service-cards-div-card{
+          width: 90%;
+        max-width: 350px;
+        flex-direction: column;
+        align-items: center;
+
+    }
+    
+}
